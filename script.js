@@ -1,5 +1,5 @@
 
-const API_URL = "http://localhost:3000/students";
+const API_URL = "https://edumanage-1-p73m.onrender.com/students";
 
 const form = document.getElementById("studentForm");
 const studentList = document.getElementById("studentList");
@@ -121,7 +121,7 @@ const attendanceList = document.getElementById("attendanceList");
 
 async function loadAttendance() {
     try {
-        const response = await fetch("http://localhost:3000/attendance");
+        const response = await fetch("https://edumanage-1-p73m.onrender.com/attendance");
         const records = await response.json();
 
         attendanceList.innerHTML = "";
@@ -159,7 +159,7 @@ attendanceForm.addEventListener("submit", async function(event) {
     };
 
     try {
-        const response = await fetch("http://localhost:3000/attendance", {
+        const response = await fetch("https://edumanage-1-p73m.onrender.com/attendance", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -189,7 +189,7 @@ const examList = document.getElementById("examList");
 
 async function loadExaminations() {
     try {
-        const response = await fetch("http://localhost:3000/examinations");
+        const response = await fetch("https://edumanage-1-p73m.onrender.com/examinations");
         const records = await response.json();
 
         examList.innerHTML = "";
@@ -226,7 +226,7 @@ examForm.addEventListener("submit", async function(event) {
     };
 
     try {
-        const response = await fetch("http://localhost:3000/examinations", {
+        const response = await fetch("https://edumanage-1-p73m.onrender.com/examinations", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -255,7 +255,7 @@ const feesList = document.getElementById("feesList");
 
 async function loadFees() {
     try {
-        const response = await fetch("http://localhost:3000/fees");
+        const response = await fetch("https://edumanage-1-p73m.onrender.com/fees");
         const records = await response.json();
 
         feesList.innerHTML = "";
@@ -301,7 +301,7 @@ feesForm.addEventListener("submit", async function(event) {
     };
 
     try {
-        const response = await fetch("http://localhost:3000/fees", {
+        const response = await fetch("https://edumanage-1-p73m.onrender.com/fees", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
